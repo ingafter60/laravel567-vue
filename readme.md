@@ -93,3 +93,35 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 14. Create repository and push it to Github
 15. Test it out :)	        
+
+## 3. Configure Fontawesome 5 with AdminLTE 3 and Laravel 5.6.7
+
+1. Install fontawesome : npm install @fortawesome/fontawesome-free (check package.json file)
+2. In resources/assets/sass/app.scss: Add Font Awesome ($fa-font-path: "../webfonts";)
+3. In resources/assets/sass/app.scss: import Mixins
+	@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+	@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+	@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+4. Modified master.blade.php and added logo, image and icon
+5. Git status
+	On branch 3_configure_fontawesome                                           
+	Changes not staged for commit:                                              
+	  (use "git add <file>..." to update what will be committed)                
+	  (use "git checkout -- <file>..." to discard changes in working directory) 
+	                                                                            
+	        modified:   package-lock.json                                       
+	        modified:   package.json                                            
+	        modified:   public/css/app.css                                      
+	        modified:   readme.md                                               
+	        modified:   resources/assets/sass/app.scss                          
+	        modified:   resources/views/layouts/master.blade.php                
+	                                                                            
+	Untracked files:                                                            
+	  (use "git add <file>..." to include in what will be committed)            
+	                                                                            
+	        public/fonts/                                                       
+	        public/img/                                                         
+	                                                                            
+	no changes added to commit (use "git add" and/or "git commit -a")           
+6. Test it out :)	
+
