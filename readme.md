@@ -58,10 +58,38 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## 1. Setup
+## 2. Setup: Installing AdminLTE 3 on Laravel 5.6.7 and Bootstrap 4
+
 1. Install laravel 5.6.7
 2. Install the dependencies: npm install
 3. Install Admin LTE 3 : npm install admin-lte@v3.0.0-alpha.2 --save
 4. Create db and add db credentials to .env
-5. Create user (Note: run php artisan migrate:fresh to install new db)
-3. 
+5. # Create user (Note: run php artisan migrate:fresh to install new db)
+6. Create user : php artisan make:auth
+7. Add AdminLTE starter
+8. Commit it
+9. Modify the starter admin (remove js and css) + /js/app.js; /css/app.css
+10. In resources/assets/js/bootstrap.js, add: <require('admin-lte');>
+11. In resources/assets/sass/app.js, add: <@import '~admin-lte/dist/css/adminlte.css';>
+12. Compile the file: open a new terminal and  npm run watch
+13. Git status
+
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	        modified:   public/css/app.css
+	        modified:   public/js/app.js
+	        modified:   readme.md
+	        modified:   resources/assets/js/bootstrap.js
+	        modified:   resources/assets/sass/app.scss
+	        modified:   resources/views/home.blade.php
+	        modified:   resources/views/layouts/master.blade.php
+
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+
+	        public/mix-manifest.json
+
+14. Create repository and push it to Github
+15. Test it out :)	        
