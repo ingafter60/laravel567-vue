@@ -64,7 +64,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 2. Install the dependencies: npm install
 3. Install Admin LTE 3 : npm install admin-lte@v3.0.0-alpha.2 --save
 4. Create db and add db credentials to .env
-5. # Create user (Note: run php artisan migrate:fresh to install new db)
+5. Create user (Note: run php artisan migrate:fresh to install new db)
 6. Create user : php artisan make:auth
 7. Add AdminLTE starter
 8. Commit it
