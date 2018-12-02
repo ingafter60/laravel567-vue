@@ -269,4 +269,30 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ## 8. (9.) Customizing User Table with Profile Photo and User Type In Laravel
 
-1. 
+1. In migrations, modify the user table (add 3 columns), as bellow:
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('type')->default('user');
+            $table->mediumText('bio')->nullable();
+            $table->string('photo')->default('profile.png');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+2. Run migration: php artisan migrate:fresh
+3. Git status
+	λ git status
+	On branch 8_CustomizingUserTablewithProfilePhotoandUserTypeInLaravel
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	        modified:   database/migrations/2014_10_12_000000_create_users_table.php
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+4. Test it out :)	
