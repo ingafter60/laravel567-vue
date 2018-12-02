@@ -231,3 +231,39 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 	no changes added to commit (use "git add" and/or "git commit -a")	
 5. Test it out :)	
+
+## 7. Custom Color for Font Awesome Icons and How Logout Works in Laravel
+
+1. Make link on logout menu
+	<
+	  <li class="nav-item">
+	    <a class="nav-link" href="{{ route('logout') }}"
+	       onclick="event.preventDefault();
+	                     document.getElementById('logout-form').submit();">
+	        <i class="nav-icon fa fa-power-off"></i>
+	        <p>             
+	          {{ __('Logout') }}
+	        </p>
+	    </a>
+
+	    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+	        @csrf
+	    </form>
+	  </li> 
+	>
+2. In _variables.scss add colors:
+3. Add color to Dashboard, Management, Profile, and Logout
+4. Test it out :
+5. Git status
+	λ git status                                                               
+	On branch 7_CustomColorforFontAwesomeIconsandHowLogoutWorksinLaravel       
+	Changes not staged for commit:                                             
+	  (use "git add <file>..." to update what will be committed)               
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+	                                                                           
+	        modified:   public/css/app.css                                     
+	        modified:   resources/assets/sass/_variables.scss                  
+	        modified:   resources/views/layouts/master.blade.php               
+	                                                                           
+	no changes added to commit (use "git add" and/or "git commit -a")           	
+
