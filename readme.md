@@ -134,7 +134,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 4. Under Management, create Profile and user icon <fas fa-user>
 5. Under Profile, create Logout with icon <fa fa-power-off>	
 
-# Main content
+- **[Main content]**
 1. Remove all content
 2. Git status
 	λ git status
