@@ -125,3 +125,27 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	no changes added to commit (use "git add" and/or "git commit -a")           
 6. Test it out :)	
 
+## 4. Customizing The AdminLTE 3 
+
+# Left sidebar
+1. Display user name
+2. Remove active class and change 'Starter Pages' to 'Management' and change the icon with <fas fa-cog>
+3. Move Simple Link to under User and change 'Simple Link' to 'Dashboard' and change the icon with this: <fas fa-tachometer-alt> and delete span tag
+4. Under Management, create Profile and user icon <fas fa-user>
+5. Under Profile, create Logout with icon <fa fa-power-off>	
+
+# Main content
+1. Remove all content
+2. Git status
+	λ git status
+	On branch 4_CustomizingTheAdminLTE3
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	        modified:   readme.md
+	        modified:   resources/views/layouts/master.blade.php
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+3. Test it out :)
+
