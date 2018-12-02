@@ -149,3 +149,52 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	no changes added to commit (use "git add" and/or "git commit -a")
 3. Test it out :)
 
+## 5. Configure Vue Router
+1. Got to router.vuejs.org, and install vue-router : npm install vue-router
+2. In resources/assets/js/app.js, add this: 
+	import VueRouter from 'vue-router';
+	Vue.use(VueRouter);
+	const routes = [
+  		{ path: '/foo', component: require('./components/Dashboard.vue') },
+  		{ path: '/bar', component: require('./components/Profile.vue') }
+	]
+	const router = new VueRouter({
+  		routes // short for `routes: routes`
+	})
+
+	Put this after last line:
+	const app = new Vue({
+	    el: '#app',
+	    router
+	});
+3. In resources/assets/js/components, create 2 files: Dashboard.vue and Profile.vue and copy the cotent of ExampleComponent.vue to them 	
+4. Add this < <router-view></router-view>> to 'main content' in master
+5. Inspect the page and found 2 errors: app.js:14008 CSRF token not found
+app.js:36618; and [Vue warn]: Cannot find element: #app
+6. Solving the problem: 1. add <id="app"> to div with class wrapper; 2. Add this   <meta name="csrf-token" content="{{ csrf_token() }}"> to master
+6. Test it out :)
+7. Add link to Dashboar and Profile with <router-link to="/dashboard" class="nav-link"> and <router-link to="profile" class="nav-link">
+8. Test the links :)	
+9. Git status
+
+λ git status                                                                
+On branch 5_configure_vue_router                                            
+Changes not staged for commit:                                              
+  (use "git add <file>..." to update what will be committed)                
+  (use "git checkout -- <file>..." to discard changes in working directory) 
+                                                                            
+        modified:   package-lock.json                                       
+        modified:   package.json                                            
+        modified:   public/js/app.js                                        
+        modified:   readme.md                                               
+        modified:   resources/assets/js/app.js                              
+        modified:   resources/views/layouts/master.blade.php                
+                                                                            
+Untracked files:                                                            
+  (use "git add <file>..." to include in what will be committed)            
+                                                                            
+        resources/assets/js/components/Dashboard.vue                        
+        resources/assets/js/components/Profile.vue                          
+                                                                            
+no changes added to commit (use "git add" and/or "git commit -a")           
+
