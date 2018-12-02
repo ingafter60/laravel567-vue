@@ -127,7 +127,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## 4. Customizing The AdminLTE 3 
 
-- **Left sidebar
+- **[Left sidebar]
 1. Display user name
 2. Remove active class and change 'Starter Pages' to 'Management' and change the icon with <fas fa-cog>
 3. Move Simple Link to under User and change 'Simple Link' to 'Dashboard' and change the icon with this: <fas fa-tachometer-alt> and delete span tag
