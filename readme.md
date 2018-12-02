@@ -198,3 +198,36 @@ Untracked files:
                                                                             
 no changes added to commit (use "git add" and/or "git commit -a")           
 
+## 6. Detect Active Menu in Vue Router and Laravel Plus HTML5 History Mode
+
+1. In app.js, add mode history like this:
+	const router = new VueRouter({
+	  mode: 'history',	
+	  routes // short for `routes: routes`
+	})
+
+2. In routes/web.php, add this: 
+<Route::get('{path}', "HomeController@index")->where('path', '([A-z\d-\/_.]+)?');>	
+3. Remove class 'active' from the master (sidebar)
+4. Create active menu: In sass/app.scss add this: 
+	<.router-link-exact-active {
+		background: #3f51b5;
+		color: #fff !important;
+	}>
+5. Git status
+	λ git status
+	On branch 6_DetectActiveMenu
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	        modified:   public/css/app.css
+	        modified:   public/js/app.js
+	        modified:   readme.md
+	        modified:   resources/assets/js/app.js
+	        modified:   resources/assets/sass/app.scss
+	        modified:   resources/views/layouts/master.blade.php
+	        modified:   routes/web.php
+
+	no changes added to commit (use "git add" and/or "git commit -a")	
+5. Test it out :)	
