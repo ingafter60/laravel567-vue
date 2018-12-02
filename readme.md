@@ -267,3 +267,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 	                                                                           
 	no changes added to commit (use "git add" and/or "git commit -a")           	
 
+## 8. (9.) Customizing User Table with Profile Photo and User Type In Laravel
+
+1. 
